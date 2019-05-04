@@ -75,10 +75,10 @@ class AudioChangeBroadcastReceiver extends BroadcastReceiver {
             int state = intent.getIntExtra(BluetoothHeadset.EXTRA_STATE, -1);
             switch (state) {
                 case BluetoothHeadset.STATE_CONNECTED:
-                    mEventSink.success(new Boolean(true));
+                    mEventSink.success(Boolean.valueOf(true));
                     break;
                 case BluetoothHeadset.STATE_DISCONNECTED:
-                    mEventSink.success(new Boolean(false));
+                    mEventSink.success(Boolean.valueOf(false));
                     break;
             }
         }
