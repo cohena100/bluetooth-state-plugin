@@ -49,10 +49,10 @@ class _MyAppState extends State<MyApp> {
         ),
         body: Center(
           child: StreamBuilder(
-            stream: BluetoothStatePlugin.intStream,
-            builder: (BuildContext context, AsyncSnapshot<int> snapshot) {
+            stream: BluetoothStatePlugin.bluetoothStream,
+            builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
               if (snapshot.hasData) {
-                return Text('PRESSURE STREAM ${snapshot.data}');
+                return Text('Bluetooth State ${snapshot.data}');
               }
               return Text('NO DATA');
             },

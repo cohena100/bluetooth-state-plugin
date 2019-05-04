@@ -46,10 +46,10 @@
     AVAudioSessionRouteChangeReason reasonValue = [reasonValueNumber unsignedIntegerValue];
     switch (reasonValue) {
         case AVAudioSessionRouteChangeReasonNewDeviceAvailable:
-            _eventSink([NSNumber numberWithInt:100]);
+            _eventSink([NSNumber numberWithBool:YES]);
             break;
         case AVAudioSessionRouteChangeReasonOldDeviceUnavailable:
-            _eventSink([NSNumber numberWithInt:200]);
+            _eventSink([NSNumber numberWithBool:NO]);
             break;
         default:
             break;
